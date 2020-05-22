@@ -5,20 +5,20 @@ stage("Cleaning Stage")
 {
   def mvnHome = tool name: 'Maven', type: 'maven'
 steps {
-bat "cd mvnHome\bin\mvn clean"
+bat "mvn clean"
 }
 }
 stage("Testing Stage")
 {
   def mvnHome_ = tool name: 'Maven', type: 'maven'
 steps{
-bat "cd mvnHome_\bin\mvn test"
+bat "mvn test"
 }
 }
 stage("Packaging Stage"){
    def mvnHome__ = tool name: 'Maven', type: 'maven'
 steps{ 
-bat "cd mvnHome__\bin\mvn package"
+bat "mvn package"
 }
 }
 }
