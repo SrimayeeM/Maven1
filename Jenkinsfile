@@ -1,18 +1,18 @@
 pipeline{
 agent any
 stages{
-stage("Cleaning Stage")
+stage('Cleaning Stage')
 {
   steps{
-bat label: '', script: 'bat "mvn clean"'
+bat 'mvn clean'
   }}
-stage("Testing Stage")
+stage('Testing Stage')
   { steps{
-bat label: '', script: 'bat "mvn test"'
+bat 'mvn test'
   }}
-stage("Packaging Stage"){
+stage('Packaging Stage'){
 steps{ 
-bat label: '', script: 'bat "mvn package"'
+bat 'mvn package'
 }
 }
 }
