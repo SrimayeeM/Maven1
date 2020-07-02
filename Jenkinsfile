@@ -4,15 +4,15 @@ stages{
 stage("Cleaning Stage")
 {
   steps{
-bat "mvn clean"
+bat label: '', script: 'bat "mvn clean"'
   }}
 stage("Testing Stage")
   { steps{
-bat "mvn test"
+bat label: '', script: 'bat "mvn test"'
   }}
 stage("Packaging Stage"){
 steps{ 
-bat "mvn package"
+bat label: '', script: 'bat "mvn package"'
 }
 }
 }
